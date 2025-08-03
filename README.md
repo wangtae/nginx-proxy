@@ -6,18 +6,48 @@
 
 ## 🚀 실행 방법
 
-### 1. NPM 시작
+### 자동 설치 및 실행 (Makefile 사용) - 권장
+
 ```bash
-cd /home/wangt/infrastructure/nginx-proxy
-docker-compose up -d
+# 프로젝트 클론 및 빠른 시작
+git clone https://github.com/wangtae/nginx-proxy.git
+cd nginx-proxy
+make quick-start
+
+# 또는 이미 클론한 경우
+make start
 ```
 
-### 2. 관리 UI 접속
+### Makefile 주요 명령어
+
+```bash
+make help          # 도움말 표시
+make quick-start   # 빠른 시작 (클론 + 설치 + 시작)
+make install       # 프로젝트 설치
+make start         # 컨테이너 시작
+make stop          # 컨테이너 중지
+make restart       # 컨테이너 재시작
+make status        # 컨테이너 상태 확인
+make logs          # 실시간 로그 보기
+make backup        # 데이터 백업
+make restore BACKUP_FILE=backups/xxx.tar.gz  # 데이터 복원
+make update        # 최신 버전으로 업데이트
+```
+
+### 수동 실행 방법
+
+1. **NPM 시작**
+```bash
+cd nginx-proxy
+docker compose up -d
+```
+
+2. **관리 UI 접속**
 ```
 http://localhost:81
 ```
 
-### 3. 초기 로그인
+3. **초기 로그인**
 - **Email**: admin@example.com
 - **Password**: changeme
 
