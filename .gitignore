@@ -1,0 +1,27 @@
+# Nginx Proxy Manager data files
+data/database.sqlite
+data/keys.json
+data/logs/
+data/letsencrypt-acme-challenge/
+data/nginx/temp/
+
+# Let's Encrypt certificates
+letsencrypt/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
